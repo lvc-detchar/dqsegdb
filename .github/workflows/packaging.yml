@@ -63,7 +63,7 @@ jobs:
       TARBALL: "dqsegdb-*.tar.*"
     steps:
       - name: Download tarball
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v4.1.7
         with:
           name: tarball
 
@@ -116,7 +116,7 @@ jobs:
       DSC: "dqsegdb_*.dsc"
     steps:
       - name: Download source package
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v4.1.7
         with:
           name: dsc-${{ matrix.debian }}
 
@@ -179,7 +179,7 @@ jobs:
     container: igwn/base:${{ matrix.debian }}
     steps:
       - name: Download binary packages
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v4.1.7
         with:
           name: deb-${{ matrix.debian }}
 
@@ -202,7 +202,7 @@ jobs:
       - debian-binary
     steps:
       - name: Download debian package
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v4.1.7
         with:
           name: deb-buster
 
@@ -234,7 +234,7 @@ jobs:
       TARBALL: "dqsegdb-*.tar.*"
     steps:
       - name: Download tarball
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v4.1.7
         with:
           name: tarball
 
@@ -289,7 +289,7 @@ jobs:
       SRPM: "python-dqsegdb-*.src.rpm"
     steps:
       - name: Download SRPM
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v4.1.7
         with:
           name: srpm-${{ matrix.el }}
 
@@ -367,7 +367,7 @@ jobs:
     container: igwn/base:${{ matrix.el }}
     steps:
       - name: Download RPMs
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v4.1.7
         with:
           name: rpm-${{ matrix.el }}
 
@@ -391,7 +391,7 @@ jobs:
       - rhel-binary
     steps:
       - name: Download RPM
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v4.1.7
         with:
           name: rpm-el7-testing
 
